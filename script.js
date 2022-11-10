@@ -18,6 +18,7 @@ function maxSubarrayWith0Sum(arr) {
     const btn = document.getElementById("_mybtn");
     btn.addEventListener("click", () => {
     const inputVal = document.getElementById("_myinput").value;
+    if(inputVal.length===0) return window.alert("Please add some values");
     let separatedValArr = inputVal.split(",").map(Number);
     document.getElementById("_myoutput").innerHTML = maxSubarrayWith0Sum(separatedValArr);
     });
